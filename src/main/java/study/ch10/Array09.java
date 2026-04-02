@@ -26,5 +26,22 @@ public class Array09 {
             System.out.println(student.toString());
         }
 
+        String searchName = "노주황";
+        Student foundStudent = null;
+        for (int i = 0; i < students.length; i++) {
+            if (searchName.equals(students[i].getName())) {
+                foundStudent = students[i];
+                break;
+            }
+        }
+        if (foundStudent == null) {
+            System.out.println("해당 이름의 학생이 존재하지 않습니다.");
+            return;
+        }
+
+        System.out.println("[찾은 학생 정보]");
+        System.out.println("이름: " + foundStudent.getName());
+        System.out.println("점수: " + foundStudent.getScore());
+
     }
 }
